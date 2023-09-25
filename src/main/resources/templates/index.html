@@ -13,9 +13,13 @@
   </head>
   <body>
     <div class="container mt-4">
+<<<<<<< HEAD
       <a th:href="@{/new}" class="btn btn-primary">Nuevo</a>
       <br />
       <br />
+=======
+      <a th:href="@{/new}" class="btn btn-primary"></a>
+>>>>>>> 23db50bccf1a24c375fc74bdbd6f3b1e53ed74db
       <table class="table">
         <thead>
           <tr>
@@ -27,9 +31,9 @@
         </thead>
         <tbody>
           <tr th:each="personas:${personas}">
-            <td>${personas.id}</td>
-            <td>${personas.name}</td>
-            <td>${personas.telefono}</td>
+            <td th:text="${personas.id}"></td>
+            <td th:text="${personas.name}"></td>
+            <td th:text="${personas.telefono}"></td>
             <td>
               <a href="#" class="btn btn-warning">Editar</a>
               <a href="#" class="btn btn-danger">Eliminar</a>
