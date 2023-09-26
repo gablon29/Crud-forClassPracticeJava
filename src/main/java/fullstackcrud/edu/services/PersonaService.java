@@ -29,8 +29,12 @@ public class PersonaService implements IpersonaService {
 
     @Override
     public int save(Persona persona) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+        int res = 0;
+        Persona p = data.save(persona); 
+        if (!p.equals(null)) {
+            res = 1;
+        }
+        return res;
     }
 
     @Override
