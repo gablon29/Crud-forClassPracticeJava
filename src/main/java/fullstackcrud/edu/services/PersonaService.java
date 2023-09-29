@@ -23,8 +23,7 @@ public class PersonaService implements IpersonaService {
 
     @Override
     public Optional<Persona> listarId(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'listarId'");
+        return data.findById(id);
     }
 
     @Override
@@ -39,7 +38,6 @@ public class PersonaService implements IpersonaService {
 
     @Override
     public void delete(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        data.existsById(id);
     }
 }
