@@ -42,6 +42,11 @@ public class Controlador {
         Optional<Persona> persona = service.listarId(id);
         model.addAttribute("persona", persona);
         return "form";
+    };
+    @GetMapping("/eliminar/{id}")
+    public String delete(Model model, @PathVariable int id) {
+        service.delete(id);
+        return "redirec:/listar";
     }
 
 }
