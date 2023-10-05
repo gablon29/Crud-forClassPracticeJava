@@ -34,7 +34,9 @@
               <a th:href="@{/editar/}+${personas.id}" class="btn btn-warning"
                 >Editar</a
               >
-              <a th:href="@{/eliminar/}+${personas.id}" class="btn btn-danger"
+              <a
+                th:onclick="eliminar([[${personas.id}]])"
+                class="btn btn-danger"
                 >Eliminar</a
               >
             </td>
@@ -42,5 +44,12 @@
         </tbody>
       </table>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="function.js"></script>
   </body>
 </html>

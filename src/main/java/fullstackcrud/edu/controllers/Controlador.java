@@ -43,6 +43,7 @@ public class Controlador {
         model.addAttribute("persona", persona);
         return "form";
     };
+    // DELETE
     @GetMapping("/eliminar/{id}")
     public String delete(Model model, @PathVariable int id) {
         service.delete(id);
